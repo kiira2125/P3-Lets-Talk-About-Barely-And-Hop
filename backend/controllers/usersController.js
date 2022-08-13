@@ -43,6 +43,14 @@ module.exports = {
       dbUser
         .update({ _id: req.params.id}, req.body, {password: 0})
         .then(dbModel => res.json({updated: dbModel}))
+        .catch(err => res.status(422).json(err));
+    },
+    remove: (req, res) => {
+      dbUser
+        .findById({_id: req.params.id})
+        .then(dbModel => dbModel.remove())
+        .then(dbModel => res.json({updated: dbModel}))
+        .catch(err => res.status(422).json(err));
     }
 
 
