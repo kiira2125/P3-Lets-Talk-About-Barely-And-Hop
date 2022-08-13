@@ -42,6 +42,7 @@ module.exports = {
     update: (req, rew) =>{
       dbUser
         .update({ _id: req.params.id}, req.body, {password: 0})
+        .then(dbModel => res.json({updated: dbModel}))
     }
 
 

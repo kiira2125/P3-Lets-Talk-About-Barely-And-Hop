@@ -22,7 +22,7 @@ app.use(routes);
 
 // react route here
 app.get('*', (req, rest) => {
-    res.sendfile(path.join(__dirname,./../client/build/index.html));
+    res.sendfile(path.join(__dirname, './../client/build/index.html'));
       
 });
 
