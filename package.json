@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
   },
-  "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme"
+  "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1"
+  }
 }
