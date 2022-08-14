@@ -12,19 +12,20 @@ const validateEmail = email => {
 
 const userSchema = newSchema ({
     name: {
-     first:
+     first:{
        type: String,
        required: [true, 'Please enter your first name, must be 2 characters or more'],
        trim: true,
        maxlength: 60
     },
+
     last: {
         type: String,
         required: [true, 'Please enter your last name, must be 2 characters or more'],
         trim: true,
         maxlength: 60  
-       },   
-   
+    }   
+},
    username: {
        type: String,
        required: [true, 'Please enter username.'],
@@ -44,7 +45,7 @@ const userSchema = newSchema ({
       },
 
     contact: {
-     email{
+     email: {
         type: String,
         required: [true, 'Please enter your email'],
         unique: true,
@@ -54,7 +55,8 @@ const userSchema = newSchema ({
             validator: validateEmail,
             message: '{VALUE} this is not a valid email address'
          }
-       },
+       }
+    },
     
     phone: {
         type: String,
@@ -62,16 +64,50 @@ const userSchema = newSchema ({
         trim: true,
         validate:{
             validator: phone => /\d{3}-\d{3}-\d{4}/.test(phone),
-        }
-    }
+            message: '{VALUE} this is not a valid phone number'
+        },
+        maxlength:15   
+     },
+
+    city: {
+        type: String,
+        required: [true, 'Please, enter a city in the US only'],
+        trim: true,
+        maxlength: 60,
+    },
+
+    state: {
+        type: String,
+        required: [true, 'Please, enter a stated in the US only'],
+        enum: STATES,
+        maxlength: 2,
+    },
+
+    recipes:[{ types: Schema.Types,ObjectId, ref: 'Recipe' }],
+    media: {
+        followers: [{type: Schema.Types,ObjectId, ref: 'User'}],
+        following: [{type: Schema.Types,ObjectId, ref: 'User'}],
+        favorites: [{type: Schema.Types,ObjectId, ref: 'Recipe'}],
+    },
+
+    image: {
+        type: String,
+        required: false,
+        trim: true,
+        maxlenght: [1500, 'Please select a smaller size image URL ( below 1500)'],
+    },
+
+    created: {type: DataTransfer, default: Date.now}
+ });
+ 
+   const User = mongoose.model('User', userSchema);
+
+   module.exports = User;
+
+    
 
 
 
-
-    }
-
-
-});
 
 
 
