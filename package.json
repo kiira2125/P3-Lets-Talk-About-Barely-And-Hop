@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1"
+    "bcrypt": "^5.0.1",
+    "mongoose": "^6.5.2"
   }
 }
