@@ -21,6 +21,7 @@
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
     "enum": "^3.0.4",
     "graphql": "^16.6.0",
     "mongoose": "^6.5.2"

@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDom.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
