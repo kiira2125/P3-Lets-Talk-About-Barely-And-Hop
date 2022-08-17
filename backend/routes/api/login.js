@@ -12,3 +12,5 @@ router.router('/:password');
 
 app.route('.check/:password')
 app.get (loginController.checkLogin);
+
+module.exports = router;
