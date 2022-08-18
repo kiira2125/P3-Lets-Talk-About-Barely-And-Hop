@@ -34,5 +34,6 @@ const recipeSchema = new Schema({
     },
 
     // add here the types of ratings for how brewing types of beer
-    // form hops to yeast, to preboil, boi, directions, the amount of hops or yeast, etch
+    // form hops to yeast, to preboil, boi, directions, the amount of hops or yeast, what are the specs in the beer, what are the boil and preboils.
+    //after readying a lot of the home brewing and understanding the level of information one needs to understand to make a successful homemade beer.
 })
