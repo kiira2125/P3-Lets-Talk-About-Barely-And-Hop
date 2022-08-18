@@ -33,7 +33,7 @@ const userSchema = newSchema ({
        lowercase: true,
        trim: true,
        minlength: [6, 'Please create a username with 6 characters or more'],
-       maxlenght: [15,'Please create a username with 15 characters or less'],
+       maxlength: [15,'Please create a username with 15 characters or less'],
    },
 
    password: {
@@ -94,42 +94,14 @@ const userSchema = newSchema ({
         type: String,
         required: false,
         trim: true,
-        maxlenght: [1500, 'Please select a smaller size image URL ( below 1500)'],
+        maxlength:[1500, 'Please select a smaller size image URL ( below 1500)'],
     },
 
     created: {type: DataTransfer, default: Date.now}
  });
  
-   const User = mongoose.model('User', userSchema);
+     const User = mongoose.model('User', userSchema);
 
-   module.exports = User;
+    module.exports = User;
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
+ 
