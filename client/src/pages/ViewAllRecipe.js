@@ -22,4 +22,4 @@ function ViewAllRecipes({ recipe }) {
   );
 }
 
-export default Project;
+export default ViewAllRecipes;
