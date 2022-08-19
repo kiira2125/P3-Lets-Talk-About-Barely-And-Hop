@@ -1,2 +1,10 @@
-#AddRecipeBut🇹🇴
+#AddRecipeButton {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: Franklin Gothic Medium, Arial;
+    font-style: italic;
+    font-weight: bold;
+    transition: .8s;    
+
+};
     
