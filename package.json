@@ -1,30 +1,25 @@
 {
-  "name": "p3-let-s-talk-about-barely-and-hop",
+  "name": "p3-lets-talk-about-barely-and-hop",
   "version": "1.0.0",
-  "description": "All about home brewing, receipts, best local brewers in your city, and social peer blog all about home brewering!!",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd backend && npm i && cd ../client && npm i",
+    "watch": "concurrently \"cd backend && nodemon server\" \"cd client && npm run start\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop.git"
   },
-  "keywords": [
-    "beer"
-  ],
-  "author": "Beer Blogging Team",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
   },
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
-  "dependencies": {
-    "axios": "^0.27.2",
-    "bcrypt": "^5.0.1",
-    "dotenv": "^16.0.1",
-    "enum": "^3.0.4",
-    "graphql": "^16.6.0",
-    "mongoose": "^6.5.2"
+  "devDependencies": {
+    "concurrently": "^7.3.0"
   }
 }

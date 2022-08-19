@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const db = require('../backend/models');
+const db = require('../models');
 
 module.exports = {
     findAll: (req, res) =>{
