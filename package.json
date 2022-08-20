@@ -18,12 +18,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
   },
+
+  
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
   "devDependencies": {
     "concurrently": "^7.3.0"
   }
+  
 }
