@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from 'react-bootstrap/lib';
 
-const LandingSignupBtn = () => {
+const LandingSignUpBtn = () => {
     const loggedIn = sessionStorage.getItem('loggedIn');
 
       if(loggedIn){
@@ -12,4 +12,4 @@ const LandingSignupBtn = () => {
     return <Button className='landingBtn' bsSize='large' block href='/register'> Sign Up </Button>
 }
 
-export default LandingSignupBtn;
+export default LandingSignUpBtn;
