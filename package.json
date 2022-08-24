@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "test": "jest",
   "scripts": {
-    "start": "node server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "install": "cd client && npm install",
+    "install": "cd client && yarn install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "react-router-dom": "^4.3.1"
   },
   "repository": {
     "type": "git",
@@ -19,14 +21,29 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "devDependencies":{
+    "nodemon": "^1.11.0",
+    "concurrently": "^7.3.0",
+    "axios": "^0.16.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.0.17",
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
+  },
   "bugs": {
     "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
   },
-
   
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
-  "devDependencies": {
-    "concurrently": "^7.3.0"
+  
+  "engines":{
+    "node": "9.5.0"
   }
+  
   
 }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Alert} from 'react-bootstrap';
-import './FollowAlert.css'
+//import './FollowAlert.css'
 
 class FollowAlert extends Component{
 
@@ -22,7 +22,7 @@ class FollowAlert extends Component{
 render(){
     if(this.state.show){
         return(
-            <Alert className = 'followAlert' bsSytle = {this.props.class} onDismiss = {this.props.closeAlert}>
+            <Alert className = 'followAlert' bsStyle = {this.props.class} onDismiss = {this.props.closeAlert}>
                 <h4>{this.state.message}</h4>
             </Alert>
         );

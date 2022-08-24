@@ -1,35 +1,24 @@
 import React from "react";
-import BestBrewers from "../BestBrewers";
-import Profile from "../Profile";
-import AddRecipe from "../AddRecipe";
-import ViewRecipe from "../ViewRecipe";
-import ViewAllRecipes from "../ViewAllRecipes";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import {Row, Col} from 'react-bootstrap';
+import Wrapper from '../../components/Wrapper';
+import LoginWell from'../../components/LoginWell';
+import LandingSignUpBtn from '../../components/LandingSignUpBtn';
+import 'LandingPage.css';
 
-function Page({ currentPage }) {
-  const renderPage = () => {
-    switch (currentPage.name) {
-      case "best-brewers":
-        return <BestBrewers />;
-      case "profile":
-        return <Profile />;
-      case "add-recipe":
-        return <AddRecipe />;
-      case "view-recipe":
-        return <ViewRecipe />;
-      case "view-all-recipes":
-        return <ViewAllRecipes />;
-
-      default:
-        return <BestBrewers />;
-    }
-  };
-
-  return (
-    <section>
-      <h2>{capitalizeFirstLetter(currentPage.name)}</h2>
-      <PageContent>{renderPage()}</PageContent>
-    </section>
-  );
-}
-export default LandingPage;
+const LandingPage = () => {
+  
+ <div>
+    <div className='landingBackground'>
+      <Wrapper className='landingLogin'>
+        <h1 className='landingTitle'>Barley legal Hops Blog </h1>
+        <h2 className='landingCatch'>'Its always Barley-Hops Hour when you make it yourself O_o'</h2>
+          <Row>
+           <Col xs={0} md={2} lg={3} />
+           <Col xs={12} md={8} lg={6}>
+            <LoginWell />
+           </Col>
+        </Row>
+      </Wrapper>
+    </div>
+</div>
+};

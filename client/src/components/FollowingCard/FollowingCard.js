@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Wrapper from  '../Wrapper';
-import './FollowingCard.css';
+//import './FollowingCard.css';
 
 const FollowingCard = props =>(
     <Wrapper> 

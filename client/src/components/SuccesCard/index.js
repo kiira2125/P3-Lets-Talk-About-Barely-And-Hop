@@ -1,1 +1,1 @@
-//export {default} from './SuccessCard.js'
+export {default} from './SuccessCard.js'

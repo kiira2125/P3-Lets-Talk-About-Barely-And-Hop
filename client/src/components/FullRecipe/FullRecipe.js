@@ -5,7 +5,7 @@ import { Col, Row } from 'react-bootstrap';
 import LikeBtn from './../LikeBtn'
 import Hop from './Hop';
 import Malt from './Malt';
-import './FullRecipe.css';
+//import './FullRecipe.css';
 
 class FullRecipe extends Component{
     state = {
@@ -23,7 +23,7 @@ class FullRecipe extends Component{
         ShowAlert: false,
         alertMessage: ''
     }
-}
+
 
  getRecipe = id =>{
     API.getRecipe(id)
@@ -100,7 +100,7 @@ class FullRecipe extends Component{
             <h2> Total Likes: {this.states.likes}</h2>
             <h2> Brewer: {this.state.brewer}</h2>
             <LikeBtn class= "fullRecipeHeader"
-              id={this.state.ed}
+              id={this.state.id}
               brewerId={this.state.brewerId}
               likes={recipe.likes}
               addLike={this.handleLikeClick}
@@ -170,7 +170,8 @@ class FullRecipe extends Component{
            </Col> 
          </Row>
         </div>
- )
+   )
+  }
 }
 
 export default FullRecipe;
