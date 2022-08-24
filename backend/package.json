@@ -1,0 +1,37 @@
+{
+  "name": "p3-let-s-talk-about-barely-and-hop",
+  "version": "1.0.0",
+  "description": "All about home brewing, receipts, best local brewers in your city, and social peer blog all about home brewering!!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "seed":"node scripts/recipeSeedDB.js",
+
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop.git"
+  },
+  "keywords": [
+    "beer"
+  ],
+  "author": "Beer Blogging Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
+  },
+  "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "enum": "^3.0.4",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0",
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

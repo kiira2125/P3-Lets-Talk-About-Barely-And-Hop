@@ -1,5 +1,5 @@
 // link the user and recipe js files
 module.exports ={
-    Users: require('./users'),
+    Users: require('./user'),
     Recipe: require('./recipe')
 };
