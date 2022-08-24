@@ -26,7 +26,15 @@ app.get('*', (req, rest) => {
 });
 
 // mongo connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/brewerApp');
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost:27017/brewerApp",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+mongoose.set("debug", true);
+
 
 // server start
 app.listen(PORT, ()=> console.log(`Server is running on PORT ${PORT}`)) 
