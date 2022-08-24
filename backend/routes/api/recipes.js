@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const LoginController = require('../../controllers/LoginController');
+const recipesController = require("../../controllers/recipesController")
 
 //getting recipe in the api using get and post
 router.route('/')

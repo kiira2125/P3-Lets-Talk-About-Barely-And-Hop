@@ -1,15 +1,14 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const routes = require('./backend/routers');
+const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
-const app = server();
+const app = express();
 
 //coding middleware
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // server static section
 if (process.env.NODE_ENV === 'production')
@@ -38,7 +37,7 @@ mongoose.set("debug", true);
 
 
 // server start
-app.listen(PORT) 
+app.listen(PORT, ()=> console.log(`Server is running on PORT ${PORT}`)) 
 
  
 

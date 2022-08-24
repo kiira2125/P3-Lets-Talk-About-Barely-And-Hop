@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
-const db = require('../backend/models');
+const db = require('../models');
 
 module.exports = {
-    findAll: (req, res) =>
+    findAll: (req, res) =>{
         db.User
             .find(req.query, {password: 0})
             .populate({path: 'recipes', populate: {path: 'brewer'}})  
@@ -16,7 +16,7 @@ module.exports = {
 
     findById: (req, res) => {
         db.User
-        .find(req.query, {password: 0})
+        .findById(req.params.id, {password: 0})
         .populate({path: 'recipes', populate: {path: 'brewer'}})  
         .populate('media.followers', {password: 0})
         .populate('media.following', {password: 0})
@@ -52,11 +52,5 @@ module.exports = {
         .then(dbModel => res.json({updated: dbModel}))
         .catch(err => res.status(422).json(err));
     }
-
-
-
-
-
-
-   }
+  };
         

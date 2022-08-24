@@ -1,7 +1,7 @@
 const db = require('../models');
 
 module.exports = {
-    findAll: (req, res) {
+    findAll: (req, res) => {
       dbRecipe
         .find(req.query)
         .sort({likes: -1})

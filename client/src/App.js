@@ -1,4 +1,4 @@
-import React from 'react
+import React from 'react';
 import{ BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './components/Nav';
 import NotFound from './components/NotFound';
@@ -8,8 +8,10 @@ import ViewAllRecipes from './pages/ViewAllRecipes';
 import BestBrewers from './pages/BestBrewers'
 import ViewRecipe from './pages/ViewRecipe';
 import AddRecipe from './pages/AddRecipe';
-import LandingPage from "./pages/LandingPage";
+import LandingPage from './pages/LandingPage';
 import Footer from './components/Footer';
+
+
 const App = () => (
   <div>
     <Nav />
@@ -29,6 +31,7 @@ const App = () => (
     </Router>
     <Footer />
   </div>
+
   );
 export default App;
 
