@@ -1,6 +1,6 @@
 import React, { COmponent } from 'react';
 import {Button, Overlay, Tooltip} from 'react=bootstrap';
-//import './likeBtn.css'
+import './likeBtn.css'
 
 
 class LikeBtn extends Component{

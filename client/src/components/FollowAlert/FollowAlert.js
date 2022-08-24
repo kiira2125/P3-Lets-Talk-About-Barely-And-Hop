@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Alert} from 'react-bootstrap';
-//import './FollowAlert.css'
+import './FollowAlert.css'
 
 class FollowAlert extends Component{
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {Button, Grid, Col, Row} from "react-bootstrap/lib"
 import Wrapper from '../Wrapper';
-//import './AddRecipeButton.css';
+import './AddRecipeButton.css';
 
 
 const AddRecipeButton = props =>{
@@ -13,7 +13,7 @@ const AddRecipeButton = props =>{
             <Row>
                 <Wrapper>
                     <Col xs={0} sm={4}>
-                    <Col xs={15} sm={7}>
+                    <Col xs={12} sm={6}>
                       <Button id = 'AddRecipeButton' href={'/recipes/new'} bsSize = 'large' block> Add a Recipe!! </Button>
                     </Col>
                     </Col>

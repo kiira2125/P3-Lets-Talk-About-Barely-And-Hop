@@ -156,7 +156,7 @@ class FullRecipe extends Component{
                 <p> {this.state.yeast.name} ({this.state.yeast.name}) </p>
             </div>
           </Col>
-          <Col sm={15} md={2}>
+          <Col sm={12} md={3}>
             <h4> Misc: </h4>
             <div className="mics" > 
             <p> {this.state.misc} </p>
