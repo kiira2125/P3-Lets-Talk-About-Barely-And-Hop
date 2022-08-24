@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const {model,Types,mongoose}= require('mongoose');
 const Schema = mongoose.Schema;
 
 const AmericanBeerType = ['IPA', 'Pilsner', 'Lager', 'Stout', 'Pale Ale', 'Porter', 'Ale', 'Other'];
