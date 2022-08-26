@@ -15,7 +15,7 @@ const LoginWell = () => {
               <WellActionBtn class='landingBtn' link='/recipes' name='Top Recipes'/>
             </Col> 
             <Col xs={15} sm={5}>
-              <WellActionBtn class='landingBtn' link='/brewers' name='Top brewers'/> 
+              <WellActionBtn class='landingBtn' link='/brewers' name='Bes Brewers'/> 
             </Col> 
           </Row>   
        </Wrapper>

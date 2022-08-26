@@ -1,14 +1,13 @@
-// const reportWebVitals = onPerfEntry => {
-//   if (onPerfEntry && onPerfEntry instanceof Function) {
-//     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-//       getCLS(onPerfEntry);
-//       getFID(onPerfEntry);
-//       getFCP(onPerfEntry);
-//       getLCP(onPerfEntry);
-//       getTTFB(onPerfEntry);
-//     });
-//   }
-// };
+const reportWebVitals = onPerfEntry => {
+  if (onPerfEntry && onPerfEntry instanceof Function) {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP}) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+    });
+  }
+};
 
 // export default reportWebVitals;
 
@@ -46,9 +45,9 @@ function registerValidSW(swURL){
         installingWorker.onstatechange = () =>{
           if (installingWorker.state === 'installed'){
             if (navigator.serviceWorker.controller){
-              console.log('New content is available.');
+              console.log('New content is available now ;).');
             } else {
-              console.log('This content is cached for offline usage.');
+              console.log('This content is cached for offline usage ~_o.');
             }
           }
         };
@@ -57,7 +56,7 @@ function registerValidSW(swURL){
     })
     
     .catch(error =>{
-      console.error('Sorry there is an error during the service worker registration', error);
+      console.error('We are sorry, there is an error during the service worker registration', error);
     });
 }
 
@@ -76,7 +75,7 @@ function checkValidServiceWorker(swURL){
       }
     })
     .catch(() => {
-      console.log('No internet connection exits. App will run offline mode');
+      console.log('No internet connection is detected. The APP will run offline mode');
     });
 }
 

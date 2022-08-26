@@ -30,26 +30,27 @@ class profile extends Component{
 }
 
 componentWillMount() {
-    this.location(this.state.id);
+    this.loadUser(this.state.id);
 }
-loadUser = id =>{
- API.getUser(id)
-  .then(res = > {
-    this.setState({
-      first: res.data.name.first,
-      last: res.data.name.last,
-      city: res.data.contact.city,
-      state: res.data.contact.state,
-      email: res.data.contact.email,
-      image: res.data.image,
-      recipeArr: res.data.recipes,
-      followingArr: res.data.media.following,
-      followerArr: res.data.media.followers,
-      likes: res.data.media.favorites,
-      username: res.data.username
+
+loadUser = id => {
+  API.getUser(id)
+  .then(res => {
+   this.setState({
+    first: res.data.name.first,
+    last: res.data.name.last,
+    city: res.data.contact.city,
+    state: res.data.contact.state,
+    email: res.data.contact.email,
+    image: res.data.image,
+    recipeArr: res.data.recipes,
+    followingArr: res.data.social.following,
+    followersArr: res.data.social.followers,
+    likes: res.data.social.favorites,
+    username: res.data.username
     });
   })
-  .catch (err => err);
+   .catch (err => err);
 }
 
 handleFollowClick = () => {
@@ -69,6 +70,14 @@ handleFollowClick = () => {
 
 //comp is just short for component for my coding
 showMsgWithClass = (message, alertClass) => {
+  this.setState({
+      showFollowAlert: true,
+      followAlert: message,
+      alertClass: alertClass ? alertClass : 'Error'
+  })
+}
+
+handleComponentChange = comp => {
     this.setState({currentComp: comp});
 };
 
@@ -88,14 +97,14 @@ renderComponent = () => {
      ));
 
      case "following":
+        // utilizing map my followingArr
       return(
         <Col xs = {12}>
           <h2 className = 'totalFollowingHeader'>
             Your Total Following Count: {this.state.followingArr.length} Brewer-Buds
           </h2>
-          // map my followingArr 
-          {this.state.followingArr.map((user, i) =>
-            <followingCard key = {`followingCard${i}`} user = {user} />
+           {this.state.followingArr.map((user, i) =>
+           <followingCard key = {`followingCard${i}`} user = {user} />
            )}
         </Col>
       );
@@ -105,13 +114,12 @@ renderComponent = () => {
        return(
         <Col xs = {12}>
           <h2 className = 'totalFollowerHeader'>
-            Your Total followers: {this.state.followerArr.length} Brewer-Buds
+            Your Total followers is: {this.state.followerArr.length} Brewer-Buds
           </h2>
            {this.state.followersArr.map((user, i) =>
               <followingCard key = {`followerCard_${i}`} user = {user} />
          )};
         </Col>
-       )
+       );
     }
-
 }
