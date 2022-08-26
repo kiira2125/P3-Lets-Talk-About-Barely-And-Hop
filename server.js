@@ -6,7 +6,7 @@ const routes = require('./backend/routes');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// below is my api mid
+// below is my api middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -24,7 +24,7 @@ app.get('*', (req, res) => {
 });
 
 // here is for mongo connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/brewerApp');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/BeerChatApp');
 
 // this will allow server to start up
 app.listen(PORT, () => {
