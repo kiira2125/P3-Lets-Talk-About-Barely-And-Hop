@@ -5,11 +5,11 @@ import NotFound from './pages/NotFound'
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 import ViewAllRecipes from './pages/ViewAllRecipes';
-import TopBrewers from './pages/TopBrewers'
+import TopBrewers from './pages/BestBrewers'
 import ViewRecipe from './pages/ViewRecipe';
 import AddRecipe from './pages/AddRecipe';
 import LandingPage from "./pages/LandingPage";
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 const App = () => (
   <div>
@@ -28,7 +28,7 @@ const App = () => (
         </Routes>
       </div>
     </Router>
-    <Footer />
+    {/* <Footer /> NEED WORK */}
   </div>
   );
 

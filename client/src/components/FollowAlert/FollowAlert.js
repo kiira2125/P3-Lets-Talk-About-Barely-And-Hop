@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert} from 'react-bootstrap';
+import {Alert, FormGroup} from 'react-bootstrap';
 import './FollowAlert.css'
 
 class FollowAlert extends Component{
@@ -30,5 +30,7 @@ render(){
     return ''
   }
 }
+
+export default FollowAlert;
 
 

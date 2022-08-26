@@ -2,7 +2,7 @@ import React from "react";
 import {Well, Row, Col} from'react-bootstrap';
 import WellActionBtn from './WellActionBtn';
 import LoginForm from './LoginForm';
-import Wrapper from './Wrapper';
+import Wrapper from './../Wrapper';
 
 const LoginWell = () => {
     if (sessionStorage.getItem('loggedIn')) {

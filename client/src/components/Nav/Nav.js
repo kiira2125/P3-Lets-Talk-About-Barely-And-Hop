@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {NavBar, NavItem, Nav, Glyphicon} from 'react-bootstrap';
-import './Nave.css';
+import './Nav.css';
 
 class Head extends Component{
     state = {

@@ -7,11 +7,10 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"cd backend && nodemon server --ignore 'client/*'\" \"cd client && npm run start\"",
     "client": "cd client && npm run start",
     "install": "cd client && yarn install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
     "react-router-dom": "^4.3.1"
   },
   "repository": {
@@ -35,8 +34,14 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^5.2.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.5.3"
+    "if-env": "^1.0.4",
+    "lib": "^4.3.3",
+    "mongoose": "^6.5.3",
+    "react-bootstrap": "^0.32.4"
   }
 }

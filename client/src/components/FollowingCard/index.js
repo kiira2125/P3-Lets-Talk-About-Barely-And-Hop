@@ -1,1 +1,1 @@
-export { default } from './following.js';
+export { default } from './FollowingCard';
