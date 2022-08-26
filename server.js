@@ -6,7 +6,7 @@ const routes = require('./backend/routes');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// below is my api middlware
+// below is my api mid
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -20,7 +20,7 @@ app.use(routes);
 
 // here react routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './../client/build/index.html'));
+  res.sendFile(path.join(__dirname, '././client/build/index.html'));
 });
 
 // here is for mongo connection
