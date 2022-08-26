@@ -8,7 +8,7 @@ import App from '../../utils/usersAPI';
 import AddRecipeButton from "../../components/AddRecipeButton/AddRecipeButton";
 import './Profile.css';
 
-class profile extends Component{
+class profile extends Component {
   state ={
     id: this.props.match.param.id,
     first: '',
@@ -24,9 +24,8 @@ class profile extends Component{
     followersArr: [],
     likes: [],
     showFollowAlert: false,
-    currentComp: 'PinRecord',
+    currentComp: 'pinRecord',
     alertClass:''
-  }
 }
 
 componentWillMount() {
