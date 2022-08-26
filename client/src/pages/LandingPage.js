@@ -24,6 +24,7 @@ function Page({ currentPage }) {
         return <BestBrewers />;
     }
   };
+  
 
   return (
     <section>
