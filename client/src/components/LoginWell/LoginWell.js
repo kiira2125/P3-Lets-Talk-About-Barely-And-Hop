@@ -9,7 +9,7 @@ const LoginWell = () => {
      return(
         <Well>
          <Wrapper>
-          <h2 className='loginTitle'> What's your next type of brew? 0_0 </h2>
+          <h2 className='loginTitle'> What's your next style brewing going to be? 0_0 </h2>
            <Row>
             <Col xs={15} sm={5}>
               <WellActionBtn class='landingBtn' link='/recipes' name='Top Recipes'/>
