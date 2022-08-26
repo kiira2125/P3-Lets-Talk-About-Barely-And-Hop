@@ -30,7 +30,7 @@ const recipeSchema = new Schema({
         type: Number,
         required: true,
         trim: true,
-        max: 1000000
+        max: 1012
     },
 
     // add here the types of ratings for how brewing types of beer

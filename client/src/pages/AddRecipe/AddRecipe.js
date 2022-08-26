@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RecipeForm from './../../components/RecipeForm';
 import SignInAlert from './../../components/SignInAlert';
 
-import "./AddRecipe.css";
+//import "./AddRecipe.css";
 
 const AddRecipe = () => {
  let componentToRender = <RecipeForm />
