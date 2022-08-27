@@ -68,7 +68,7 @@ const userSchema = new Schema({
         "Please enter your first name, must be 2 characters or more",
       ],
       trim: true,
-      maxlength: 60,
+      max_length: 60,
     },
 
     last: {
@@ -78,7 +78,7 @@ const userSchema = new Schema({
         "Please enter your last name, must be 2 characters or more",
       ],
       trim: true,
-      maxlength: 60,
+      max_length: 60,
     },
   },
   username: {
@@ -88,7 +88,7 @@ const userSchema = new Schema({
     lowercase: true,
     trim: true,
     minlength: [6, "Please create a username with 6 characters or more"],
-    maxlength: [15, "Please create a username with 15 characters or less"],
+    max_length: [15, "Please create a username with 15 characters or less"],
   },
 
   password: {
@@ -96,19 +96,19 @@ const userSchema = new Schema({
     required: [true, "Please enter a password"],
     trim: true,
     minlength: [8, "Please select a password with 8 characters or more"],
-    maxlength: [20, "Please select a password with 20 characters or less"],
+    max_length: [20, "Please select a password with 20 characters or less"],
   },
 
   contact: {
     email: {
       type: String,
-      required: [true, "Please enter your email"],
+      required: [true, "Please enter your email!"],
       unique: true,
       lowercase: true,
       trim: true,
       validate: {
         validator: validateEmail,
-        message: "{VALUE} this is not a valid email address",
+        message: "{VALUE} this is not a valid email address!",
       },
     },
   },
@@ -121,21 +121,21 @@ const userSchema = new Schema({
       validator: (phone) => /\d{3}-\d{3}-\d{4}/.test(phone),
       message: "{VALUE} this is not a valid phone number",
     },
-    maxlength: 15,
+    max_length: 15,
   },
 
   city: {
     type: String,
     required: [true, "Please, enter a city in the US only"],
     trim: true,
-    maxlength: 60,
+    max_length: 60,
   },
 
   state: {
     type: String,
     required: [true, "Please, enter a stated in the US only"],
     enum: STATES,
-    maxlength: 2,
+    max_length: 2,
   },
 
   recipes: [{ type: Schema.ObjectId, ref: "Recipe" }],
@@ -149,7 +149,7 @@ const userSchema = new Schema({
     type: String,
     required: false,
     trim: true,
-    maxlength: [1500, "Please select a smaller size image URL ( below 1500)"],
+    max_length: [1500, "Please select a smaller size image URL ( below 1500)"],
   },
 
   created: { type: Date, default: Date.now },

@@ -1,51 +1,53 @@
-import React, {Component} from "react";
-import {Grid, col, Row} from 'react-bootstrap';
-import FollowingCard from "../../components/FollowingCard";
-import API from "../../utils/userAPI";
-import './BestBrewers.css';
+// import React, {Component} from "react";
+// import {Container, Col, Row} from 'react-bootstrap';
+// //import {Container} from 'react-bootstrap-Container';
+// import FollowingCard from "../../components/FollowingCard";
+// import API from "../../utils/usersAPI"
+// //import './BestBrewers.css';
 
-class BestBrewers extends Component{
+// class BestBrewers extends Component{
 
-  state = {
-    userArr: [],
-  }
+//   state = {
+//     userArr: [],
+//   }
 
-  componentDidMount(){
-    this.getsUsers();
-  }
+//   componentDidMount(){
+//     this.getsUsers();
+//   }
 
-  getUsers = () => {
-    API.getUsers() 
-    .then(res => {
-      this.setState({
-        userArr: res.data
-      });
+//   getUsers = () => {
+//     API.getUsers() 
+//     .then(res => {
+//       this.setState({
+//         userArr: res.data
+//       });
 
-    })
-     .catch(err => err);
-  }
-} 
+//     })
+//      .catch(err => err);
+//   }
 
-render(){
-    return(
-     <div>
-      <Grid>
-       <Row>
-        <Col xs={12}>
-         <h2 className = 'brewerHeader'> Best Brewers </h2>
-        </Col>
-       </Row>
-       <Row>
-        <Col xs={12}>
-        /* utilizing map for userArr */
-          {this.state.userArr.map((user, i) =>
-           <FollowingCard key = {`brewerCardName${i}`} user = {user} />
-          )};
-        </Col>
-       </Row>
-      </Grid>
-     </div>
-    )
-};
+// /* utilizing map for userArr */
+// render(){
 
-export default BestBrewers;
+//     return(
+//      <div>
+//       <Container>
+//          <Row>
+//           <Col xs={12}>
+//             <h2 className = 'brewerHeader'> Best Brewers </h2>
+//         </Col>
+//       </Row>
+//      <Row>
+//         <Col xs={12}>
+//             {this.state.userArr.map((user, i) =>
+//            <FollowingCard key = {`brewerCard${i}`} user = {user} />
+//           )}
+//         </Col>
+//        </Row>
+//       </Container>
+//      </div>
+//     )
+//   }
+// };
+
+// export default BestBrewers;

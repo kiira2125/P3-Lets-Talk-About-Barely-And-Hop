@@ -4,7 +4,7 @@ import API from '../../../utils/loginAPI';
 import LoginInput from './LoginInput';
 import Wrapper from '../../../components/Wrapper';
 
-class LoginForm extends component {
+class LoginForm extends Component {
     state = {
         username: '',
         password: '',
@@ -70,6 +70,8 @@ class LoginForm extends component {
  }
 
  render(){
+
+  return(
    <Form>
     <Wrapper>
       <h2 className='loginTitle'> Start Connecting! </h2>
@@ -80,5 +82,8 @@ class LoginForm extends component {
       </FormGroup>
     </Wrapper>
    </Form>
+   )
  }
 }
+
+export default LoginForm;

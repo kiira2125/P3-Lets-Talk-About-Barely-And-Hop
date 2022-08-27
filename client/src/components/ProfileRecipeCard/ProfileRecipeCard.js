@@ -7,3 +7,5 @@ class profileRecipeCard extends Component{
       let color = '';
     }
 }
+
+export default 'Profile Recipe Card';

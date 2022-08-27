@@ -1,12 +1,12 @@
 import React from "react";
-import { Grid, Col, Row, Jumbotron, Button } from 'react-bootstrap';
+import { Container, Col, Row, Button } from 'react-bootstrap';
 import './SignInAlert.css';
 
 const SignInAlert = () => (
-    <Grid className='noMatch'>
+    <Container className='noMatch'>
         <Row>
             <Col xs={12}>
-             <Jumbotron className = 'jumbo'>
+             <div className = 'jumbo'>
               <h1> Sorry you Hop'ed a bit too far O_o;</h1>
               <h2>
                 Please Login to add your recipe!
@@ -23,10 +23,10 @@ const SignInAlert = () => (
                   </p>
                 </Col>
               </Row>
-             </Jumbotron>;
+             </div>;
              </Col>
         </Row>
-    </Grid>
+    </Container>
 )
 
 export default SignInAlert;

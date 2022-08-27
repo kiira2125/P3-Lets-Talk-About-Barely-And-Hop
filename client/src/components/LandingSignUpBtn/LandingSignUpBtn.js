@@ -1,15 +1,15 @@
 import React from 'react';
-import {Button} from 'react-bootstrap/lib';
+import {Button} from 'react-bootstrap';
 
-const LandingSignupBtn = () => {
+const LandingSignUpBtn = () => {
     const loggedIn = sessionStorage.getItem('loggedIn');
 
       if(loggedIn){
         return(
-            <Button className='landingBtn' bsSize='large' block href='/recipes'> Top Recipes </Button>
+            <Button className='landingBtn' bsSize='large' block href='/recipes'> Top Recipes 🍻</Button>
         )
       }
-    return <Button className='landingBtn' bsSize='large' block href='/register'> Sign Up </Button>
+    return <Button className='landingBtn' bsSize='large' block href='/register'> Sign Up o_O</Button>
 }
 
-export default LandingSignupBtn;
+export default LandingSignUpBtn;

@@ -1,0 +1,46 @@
+{
+  "name": "p3-lets-talk-about-barely-and-hop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "test": "jest",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"cd backend && nodemon server --ignore 'client/*'\" \"cd client && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "if-env": "^1.0.4",
+    "nodemon": "^2.0.19"
+  },
+  "bugs": {
+    "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
+  },
+  "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
+  "engines": {
+    "node": "9.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.2.0",
+    "bootstrap-4-grid": "^3.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0",
+    "lib": "^4.3.3",
+    "mongoose": "^6.5.3",
+    "node": "^16.17.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0"
+  }
+}
