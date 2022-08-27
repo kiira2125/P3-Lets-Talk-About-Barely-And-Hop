@@ -1,12 +1,12 @@
 import React from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import Wrapper from  '../Wrapper';
 //import './FollowingCard.css';
 
 const FollowingCard = props =>(
   <Wrapper>
   <a href={`/profile/${props.user._id}`}>
-      <Grid className='followingCard'>
+      <Container className='followingCard'>
           <Row className='followingCardContent'>
               <Col className='followingCardPicture' xs={12} sm={3}>
                   <img className='followPicture' src={`${props.user.image}`} alt={`${props.user.username}ProfilePicture`}></img>
@@ -20,7 +20,7 @@ const FollowingCard = props =>(
                   <p className='followingCardOther'>{props.user.contact.email}</p>
               </Col>
           </Row>
-      </Grid>
+      </Container>
   </a>
 </Wrapper>
 );

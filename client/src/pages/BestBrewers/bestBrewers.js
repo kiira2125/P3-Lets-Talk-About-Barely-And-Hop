@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {Grid, Col, Row} from 'react-bootstrap';
+import {Container, Col, Row} from 'react-bootstrap';
+//import {Container} from 'react-bootstrap-Container';
 import FollowingCard from "../../components/FollowingCard";
 import API from "../../utils/usersAPI"
-import {Grid} from 'react-bootstrap-grid';
 //import './BestBrewers.css';
 
 class BestBrewers extends Component{
@@ -31,7 +31,7 @@ render(){
 
     return(
      <div>
-      <Grid>
+      <Container>
          <Row>
           <Col xs={12}>
             <h2 className = 'brewerHeader'> Best Brewers </h2>
@@ -44,7 +44,7 @@ render(){
           )}
         </Col>
        </Row>
-      </Grid>
+      </Container>
      </div>
     )
   }

@@ -1,10 +1,10 @@
 import React from "react";
-import { Col, FormControl, ControlLabel } from 'react-bootstrap';
+import { Col, FormControl } from 'react-bootstrap';
 
 const LoginInput = props => (
 
     <Col>
-        <ControlLabel className='loginLabel'>{props.name}:</ControlLabel>
+        <label className='loginLabel'>{props.name}:</label>
         <FormControl 
             id={`login${props.name}`}
             type={props.type} 

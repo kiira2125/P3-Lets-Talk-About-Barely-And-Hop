@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import RecipeForm from './../../components/RecipeForm';
 import SignInAlert from './../../components/SignInAlert';
-import {Grid} from 'react-bootstrap-grid';
-
+//import {Container} from 'react-bootstrap-Container';
 //import "./AddRecipe.css";
 
 const AddRecipe = () => {

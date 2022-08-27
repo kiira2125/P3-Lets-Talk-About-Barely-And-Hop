@@ -2,9 +2,8 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Wrapper from "../../components/Wrapper";
 import LoginWell from "../../components/LoginWell";
-import {Grid} from 'react-bootstrap-grid';
 import LandingSignUpBtn from '../../components/LandingSignUpBtn';
-import "LandingPage.css";
+import './LandingPage.css';
 
 const LandingPage = () => (
     <div>

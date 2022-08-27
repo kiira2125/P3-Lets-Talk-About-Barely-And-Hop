@@ -1,8 +1,8 @@
-//import prefixes from 'react-bootstrap-grid-components';
+//import prefixes from 'react-bootstrap-Container-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Grid} from 'react-bootstrap-grid';
+//import {Container} from 'react-bootstrap-Container';
 import React, {Component} from 'react';
-import { Grid, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import ProfileCard from '../../components/ProfileCard';
 import ProfileRecipeCard from '../../components/ProfileRecipeCard';
 import FollowingCard from '../../components/FollowingCard';
@@ -216,7 +216,7 @@ class Profile extends Component {
   render(){
     return(
      <div className='profileBackground'>
-      <Grid>
+      <Container>
        <Row>
         <Col xs={12}>
          <ProfileCard 
@@ -245,7 +245,7 @@ class Profile extends Component {
         <Row>
           {this.renderComponent()}
         </Row>
-      </Grid>
+      </Container>
     </div>
    );
   }

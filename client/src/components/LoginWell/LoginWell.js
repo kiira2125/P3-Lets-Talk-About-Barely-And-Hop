@@ -1,5 +1,5 @@
 import React from "react";
-import {Well, Row, Col} from'react-bootstrap';
+import { Row, Col} from'react-bootstrap';
 import WellActionBtn from './WellActionBtn';
 import LoginForm from './LoginForm';
 import Wrapper from './../Wrapper';
@@ -7,7 +7,7 @@ import Wrapper from './../Wrapper';
 const LoginWell = () => {
     if (sessionStorage.getItem('loggedIn')) {
      return(
-        <Well>
+     
          <Wrapper>
           <h2 className='loginTitle'> What's your next style brewing going to be? 0_0 </h2>
            <Row>
@@ -19,13 +19,13 @@ const LoginWell = () => {
             </Col> 
           </Row>   
        </Wrapper>
-    </Well>
+
      )
     }
     return(
-        <Well>
+    
             <LoginForm/>
-        </Well>
+   
     )
 }
 

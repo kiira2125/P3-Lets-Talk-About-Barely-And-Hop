@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import {NavBar, NavItem, Nav, Glyphicon} from 'react-bootstrap';
+import {Navbar, NavItem, Nav,} from 'react-bootstrap'; 
+import {IonIcon} from '@ionic/react';
+import {homeOutline,personOutline} from 'ionicons/icons';
 import './Nav.css';
 
 class Head extends Component{
     state = {
-      loggedIn: sessionSession.getItem('loggedIn'),
+      loggedIn: sessionStorage.getItem('loggedIn'),
       brewer: sessionStorage.getItem('userID'),
       profileLink: '',
       display:{display: 'none'}
@@ -61,18 +63,17 @@ class Head extends Component{
      <Navbar.Header>
       <Navbar.Brand>
        <a className = 'navName' href='/'>Let's Talk About Barely and Hops!! O_o!</a>
-       </Navbar.Brand>
-       <Navbar.Toggle />
+       </Navbar.Brand>🤢
      </Navbar.Header>
      <Navbar.Collapse>
         <Nav pullRight>
           <NavItem className='navLinks' eventKey={1} href = '/'>
-            <Glyphicon glyph = 'home'/>
+            <IonIcon icon = {homeOutline}/>
           </NavItem>
           <NavItem className = 'navLinks' eventKey = {2} href = '/brewers'> Top Brewer </NavItem> 
           <NavItem className = 'navLinks' eventKey = {3} href = '/recipes'> Best Recipes </NavItem>
           <NavItem className = 'navLinks' style = {this.state.display} eventKey = {4} href = {this.state.profileLink}>
-            <Glyphicon glyph = 'users'/>
+           <IonIcon icon = {personOutline}/>
           </NavItem>
           <NavItem className = 'navLinks' eventKey = {5} onClick = {this.state.onNavTabClick}> {this.state.navTab}</NavItem>
         </Nav>

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Grid, Col, Row} from 'react-bootstrap';
+import {Container, Col, Row} from 'react-bootstrap';
 import './SecondaryNav.css'
 
 const SecondaryNav = props => {
     return(
-     <Grid className = 'secondaryNav'>
+     <Container className = 'secondaryNav'>
       <Row className = 'secondaryNavRow'>
         <Col xsHidden>
           <div>
@@ -40,7 +40,7 @@ const SecondaryNav = props => {
         </div>
       </Col>
     </Row>
-  </Grid>
+  </Container>
     )
 }
 

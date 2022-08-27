@@ -1,12 +1,12 @@
 import React from 'react';
-import {Grid, Col, Row} from 'react-bootstrap';
+import {Container, Col, Row} from 'react-bootstrap';
 import Wrapper from '../Wrapper/';
 import FollowAlert from './../FollowAlert';
 import FollowBtn from './FollowBtn';
 import './ProfileCard.css';
 
 const ProfileCard = props => (
-  <Grid className = 'profileCardCard'>
+  <Container className = 'profileCardCard'>
     <Row>
       <Col xs={12}>
         <Wrapper>
@@ -43,7 +43,7 @@ const ProfileCard = props => (
           />
       </Col>
     </Row>
-</Grid>
+</Container>
 );
 
 export default ProfileCard;

@@ -24,7 +24,7 @@ const App = () => (
           <Route exact path='/brewers' component={TopBrewers} />
           <Route exact path='/register' component={Register} />
           <Route exact path='/recipes/:id' component={ViewRecipe} />
-          <Route component={NoMatch} />
+          <Route component={NotFound} />
         </Routes>
       </div>
     </Router>

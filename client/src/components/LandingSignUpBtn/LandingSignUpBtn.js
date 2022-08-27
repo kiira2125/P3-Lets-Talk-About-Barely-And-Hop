@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'react-bootstrap/lib';
+import {Button} from 'react-bootstrap';
 
 const LandingSignUpBtn = () => {
     const loggedIn = sessionStorage.getItem('loggedIn');

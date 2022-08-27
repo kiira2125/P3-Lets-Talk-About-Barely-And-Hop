@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from '../../utils/recipeAPI';
-import Grid from 'react-bootstrap/lib/Grid';
+import Container from 'react-bootstrap/lib/Container';
 import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
 import RecipeCard from '../RecipeCard';
@@ -27,7 +27,7 @@ class RecipeBoard extends Component {
 render() {
     return(
       <div className ="recipeBoard">
-       <Grid>
+       <Container>
         <Row>
           <Col xs = {12}>
            <h2 className = 'recipeHeader'> Best Recipes #🍻 </h2>
@@ -54,7 +54,7 @@ render() {
              </Col>
             </Row>
           ))}
-       </Grid>
+       </Container>
      </div>
     )
   }

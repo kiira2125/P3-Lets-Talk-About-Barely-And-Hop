@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, rid, Col, Row } from 'react-bootstrap/lib';
+import { Button, Container, Col, Row } from 'react-bootstrap';
 import Wrapper from '../Wrapper';
 import './AddRecipeButton.css';
 
@@ -9,7 +9,7 @@ const AddRecipeButton = props => {
     
     if(loggedIn && props.id === brewer){
         return (
-            <Grid>
+            <Container>
               <Row>
                 <Wrapper>
                   <Col xs={0} sm={3} />
@@ -19,7 +19,7 @@ const AddRecipeButton = props => {
                     <Col xs={0} sm={3} />
                     </Wrapper>
                 </Row>
-            </Grid>
+            </Container>
         )
     }
 

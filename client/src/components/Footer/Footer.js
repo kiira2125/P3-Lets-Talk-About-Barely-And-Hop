@@ -1,11 +1,11 @@
 import React from 'react';
-import {Panel, Well, Col, Grid} from 'react-bootstrap';
+import {Panel, Well, Col, Container} from 'react-bootstrap';
 import Wrapper from './/.//component/Wrapper';
 //import './Footer.css';
 
 const Footer = () => (
     <div>
-      <Grid/>
+      <Container/>
       <Footer>
         <Panel className = 'footerView'>
         <Wrapper>
@@ -20,7 +20,7 @@ const Footer = () => (
                </Col>
                 </Wrapper>
             </Panel>
-          <Grid/>
+          <Container/>
         <Well className='footerWell'>
       <Wrapper>
           <Col xs={12} sm={8} md={9}>
