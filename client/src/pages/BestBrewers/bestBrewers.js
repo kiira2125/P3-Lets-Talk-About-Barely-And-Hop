@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Grid, Col, Row} from 'react-bootstrap';
 import FollowingCard from "../../components/FollowingCard";
 import API from "../../utils/usersAPI"
+import {Grid} from 'react-bootstrap-grid';
 //import './BestBrewers.css';
 
 class BestBrewers extends Component{

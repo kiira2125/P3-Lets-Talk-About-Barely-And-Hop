@@ -1,34 +1,42 @@
-import React, { Component} from 'react';
-import {Grid, Col, Row} from 'react-bootstrap';
+//import prefixes from 'react-bootstrap-grid-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Grid} from 'react-bootstrap-grid';
+import React, {Component} from 'react';
+import { Grid, Col, Row } from 'react-bootstrap';
 import ProfileCard from '../../components/ProfileCard';
 import ProfileRecipeCard from '../../components/ProfileRecipeCard';
-import FollowingCard from '../../components/FollowingCard'
+import FollowingCard from '../../components/FollowingCard';
 import RecipeCard from '../../components/RecipeCard';
 import SecondaryNav from '../../components/SecondaryNav';
 import API from '../../utils/usersAPI';
 import AddRecipeButton from "../../components/AddRecipeButton/AddRecipeButton";
-import Profile from '.';
 import './Profile.css';
 
+
 class Profile extends Component {
-  state ={
-    id: this.props.match.param.id,
-    first: '',
-    last: '',
-    city: '',
-    state:'',
-    email: '',
-    image: '',
-    username: '',
-    recipeArr: [],
-    followAlert: '',
-    followingArr: [],
-    followersArr: [],
-    likes: [],
-    showFollowAlert: false,
-    currentComp: 'pinRecord',
-    alertClass:''
-  }
+
+    state = {
+        id: this.props.match.params.id,
+        first: '',
+        last: '',
+        city: '',
+        state: '',
+        email: '',
+        image: '',
+        username: '',
+        recipeArr: [],
+        followAlert: '',
+        followingArr: [],
+        followersArr: [],
+        likes:[],
+        showFollowAlert: false,
+        currentComp: "pinnedRec",
+        alertClass: ''
+    }
+
+    componentWillMount() {
+        this.loadUser(this.state.id);
+    }
 
   componentWillMount() {
       this.loadUser(this.state.id);
@@ -177,15 +185,15 @@ class Profile extends Component {
   
   handleAddFollow = brewerToFollowID => {
       const currentBrewerID = sessionStorage.getItem('userID')
-      // UPDATE THE CURRENT BREWER'S FOLLOWING LIST
+      //here will update the current brewer's following list
       API.updateUser(currentBrewerID, {$addToSet: {'social.following': [brewerToFollowID]}})
       .then(res => {
           if(res.data.updated > 0){
               
-              // UPDATE THE OTHER BREWER'S FOLLOWERS LIST
+              // updating the other beer brewer's "follower list" API.updateUser
               API.updateUser(brewerToFollowID, {$addToSet: {'social.followers': [currentBrewerID]}})
               .then(res => {
-                  const msg = `Thanks for following ${this.state.first} ${this.state.last}!`;
+                  const msg = `Thanks for following me! Cheers Mate! ${this.state.first} ${this.state.last}!`;
                   this.showMsgWithClass(msg, 'success');
               })
               .catch(err => err);

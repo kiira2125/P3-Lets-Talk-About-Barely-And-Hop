@@ -1,5 +1,6 @@
 import React from "react";
 import {Grid, Col, Row, Jumbotron, Button} from 'react-bootstrap';
+import {Grid} from 'react-bootstrap-grid';
 import './NotFound.css'
 
 const NotFound = () => (

@@ -11,6 +11,7 @@
     "client": "cd client && npm run start",
     "install": "cd client && yarn install",
     "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
     "react-router-dom": "^4.3.1"
   },
   "repository": {
@@ -42,6 +43,11 @@
     "if-env": "^1.0.4",
     "lib": "^4.3.3",
     "mongoose": "^6.5.3",
-    "react-bootstrap": "^0.32.4"
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^2.1.4"
   }
 }

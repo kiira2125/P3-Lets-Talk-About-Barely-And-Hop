@@ -6,10 +6,10 @@ const LandingSignUpBtn = () => {
 
       if(loggedIn){
         return(
-            <Button className='landingBtn' bsSize='large' block href='/recipes'> Top Recipes </Button>
+            <Button className='landingBtn' bsSize='large' block href='/recipes'> Top Recipes 🍻</Button>
         )
       }
-    return <Button className='landingBtn' bsSize='large' block href='/register'> Sign Up </Button>
+    return <Button className='landingBtn' bsSize='large' block href='/register'> Sign Up o_O</Button>
 }
 
 export default LandingSignUpBtn;

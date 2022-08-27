@@ -2,7 +2,8 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Wrapper from "../../components/Wrapper";
 import LoginWell from "../../components/LoginWell";
-// import LandingSignUpBtn from '../../components/LandingSignUpBtn';
+import {Grid} from 'react-bootstrap-grid';
+import LandingSignUpBtn from '../../components/LandingSignUpBtn';
 import "LandingPage.css";
 
 const LandingPage = () => (
@@ -39,7 +40,7 @@ const LandingPage = () => (
                 <li className = 'LandingListItem'> Interacting with other other brewer thinkers like yourself</li>
                 <li className = 'LandingListItem'> Discussing your recipe with others Brewers </li>
                 <li className = 'LandingListItem'> Receiving feed back from other Brewers</li>
-                <li className = 'LandingListItem'> Collecting other recipes and save your favorites recipe all in one site.</li>
+                <li className = 'LandingListItem'> Collecting other recipes and saving your favorites recipe all in one site.</li>
                </ul>
          </Col>
         <Col xs = {12}>
