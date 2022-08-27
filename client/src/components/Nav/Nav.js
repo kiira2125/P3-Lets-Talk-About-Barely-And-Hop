@@ -1,87 +1,73 @@
-import React, {Component} from 'react';
-import {Navbar, NavItem, Nav,} from 'react-bootstrap'; 
-import {IonIcon} from '@ionic/react';
-import {homeOutline,personOutline} from 'ionicons/icons';
-import './Nav.css';
+// import {Navbar, NavItem, Nav,} from 'react-bootstrap'; 
+// import {IonIcon} from '@ionic/react';
+// import {homeOutline,personOutline} from 'ionicons/icons';
+// import './Nav.css';
 
-class Head extends Component{
-    state = {
-      loggedIn: sessionStorage.getItem('loggedIn'),
-      brewer: sessionStorage.getItem('userID'),
-      profileLink: '',
-      display:{display: 'none'}
-    };
+// function Nav ()
 
-  componentWillMount(){
-    this.checkLogin();
-  }
+//     state = {
+//       loggedIn: sessionStorage.getItem('loggedIn'),
+//       brewer: sessionStorage.getItem('userID'),
+//       profileLink: '',
+//       display:{display: 'none'}
+//     };
 
-  checkLogin = () => {
-    if(this.state.loggedIn){
-      this.setupOutTab();
-      this.displayViewProfileLink();
-    } else {
-      this.setSignUpTab();
-    }
-  }
+//   componentWillMount(){
+//     this.checkLogin();
+//   }
 
-  setLogOutTab = () => {
-    if(this.state.loggedIn){
-      this.setup.setLogOutTab();
-      this.displayViewProfileLink();
-    } else {
-      this.setSignUpTab();
-    }
-  }
+//   checkLogin = () => {
+//     if(this.state.loggedIn){
+//       this.setupOutTab();
+//       this.displayViewProfileLink();
+//     } else {
+//       this.setSignUpTab();
+//     }
+//   }
 
-  setSignUpTab = () =>{
-    this.setState({
-        navTab: 'Sign UP',
-        onNavTabClick: this.handleSignUp
-    })
-  }
+//   setLogOutTab = () => {
+//     if(this.state.loggedIn){
+//       this.setup.setLogOutTab();
+//       this.displayViewProfileLink();
+//     } else {
+//       this.setSignUpTab();
+//     }
+//   }
 
-  handleLogOut = () => {
-    sessionStorage.clear();
-    window.location.href = `/`;
-  }
+//   setSignUpTab = () =>{
+//     this.setState({
+//         navTab: 'Sign UP',
+//         onNavTabClick: this.handleSignUp
+//     })
+//   }
 
-  handleSignUp = () => {
-    window.location.href =`/register`;
-  }
+//   handleLogOut = () => {
+//     sessionStorage.clear();
+//     window.location.href = `/`;
+//   }
 
-  displayViewProfileLink = () => {
-    this.setState({
-     profileLink: `/profile/${this.state.brewer}`,
-     display: {display: 'inline'}
-    })
-  }
+//   handleSignUp = () => {
+//     window.location.href =`/register`;
+//   }
 
-  render(){
-    return(
-    <Navbar collapseOnSelect>
-     <Navbar.Header>
-      <Navbar.Brand>
-       <a className = 'navName' href='/'>Let's Talk About Barely and Hops!! O_o!</a>
-       </Navbar.Brand>🤢
-     </Navbar.Header>
-     <Navbar.Collapse>
-        <Nav pullRight>
-          <NavItem className='navLinks' eventKey={1} href = '/'>
-            <IonIcon icon = {homeOutline}/>
-          </NavItem>
-          <NavItem className = 'navLinks' eventKey = {2} href = '/brewers'> Top Brewer </NavItem> 
-          <NavItem className = 'navLinks' eventKey = {3} href = '/recipes'> Best Recipes </NavItem>
-          <NavItem className = 'navLinks' style = {this.state.display} eventKey = {4} href = {this.state.profileLink}>
-           <IonIcon icon = {personOutline}/>
-          </NavItem>
-          <NavItem className = 'navLinks' eventKey = {5} onClick = {this.state.onNavTabClick}> {this.state.navTab}</NavItem>
-        </Nav>
-     </Navbar.Collapse>
-    </Navbar>
+//   displayViewProfileLink = () => {
+//     this.setState({
+//      profileLink: `/profile/${this.state.brewer}`,
+//      display: {display: 'inline'}
+//     })
+//   }
 
-    );
-  }
-}
+//   render(){
+//     return(
+//       <div>
+//         <p>Hops are dope</p>
+//         <ul style={{ display: 'flex' }}>
+//           <li>Login</li>
+//           <li>Signup</li>
+//         </ul>
+//       </div>
+//     );
+//   }
+// }
 
-export default Head;
+// export default Head;
