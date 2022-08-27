@@ -60,27 +60,27 @@ const validateEmail = (email) => {
 };
 
 const userSchema = new Schema({
-  name: {
-    first: {
-      type: String,
-      required: [
-        true,
-        "Please enter your first name, must be 2 characters or more",
-      ],
-      trim: true,
-      max_length: 60,
-    },
+  // name: {
+  //   first: {
+  //     type: String,
+  //     required: [
+  //       true,
+  //       "Please enter your first name, must be 2 characters or more",
+  //     ],
+  //     trim: true,
+  //     max_length: 60,
+  //   },
 
-    last: {
-      type: String,
-      required: [
-        true,
-        "Please enter your last name, must be 2 characters or more",
-      ],
-      trim: true,
-      max_length: 60,
-    },
-  },
+  //   last: {
+  //     type: String,
+  //     required: [
+  //       true,
+  //       "Please enter your last name, must be 2 characters or more",
+  //     ],
+  //     trim: true,
+  //     max_length: 60,
+  //   },
+  // },
   username: {
     type: String,
     required: [true, "Please enter username."],
@@ -99,44 +99,44 @@ const userSchema = new Schema({
     max_length: [20, "Please select a password with 20 characters or less"],
   },
 
-  contact: {
-    email: {
-      type: String,
-      required: [true, "Please enter your email!"],
-      unique: true,
-      lowercase: true,
-      trim: true,
-      validate: {
-        validator: validateEmail,
-        message: "{VALUE} this is not a valid email address!",
-      },
-    },
-  },
+  // contact: {
+  //   email: {
+  //     type: String,
+  //     required: [true, "Please enter your email!"],
+  //     unique: true,
+  //     lowercase: true,
+  //     trim: true,
+  //     validate: {
+  //       validator: validateEmail,
+  //       message: "{VALUE} this is not a valid email address!",
+  //     },
+  //   },
+  // },
 
-  phone: {
-    type: String,
-    required: false,
-    trim: true,
-    validate: {
-      validator: (phone) => /\d{3}-\d{3}-\d{4}/.test(phone),
-      message: "{VALUE} this is not a valid phone number",
-    },
-    max_length: 15,
-  },
+  // phone: {
+  //   type: String,
+  //   required: false,
+  //   trim: true,
+  //   validate: {
+  //     validator: (phone) => /\d{3}-\d{3}-\d{4}/.test(phone),
+  //     message: "{VALUE} this is not a valid phone number",
+  //   },
+  //   max_length: 15,
+  // },
 
-  city: {
-    type: String,
-    required: [true, "Please, enter a city in the US only"],
-    trim: true,
-    max_length: 60,
-  },
+  // city: {
+  //   type: String,
+  //   required: [true, "Please, enter a city in the US only"],
+  //   trim: true,
+  //   max_length: 60,
+  // },
 
-  state: {
-    type: String,
-    required: [true, "Please, enter a stated in the US only"],
-    enum: STATES,
-    max_length: 2,
-  },
+  // state: {
+  //   type: String,
+  //   required: [true, "Please, enter a stated in the US only"],
+  //   enum: STATES,
+  //   max_length: 2,
+  // },
 
   recipes: [{ type: Schema.ObjectId, ref: "Recipe" }],
   media: {

@@ -26,17 +26,20 @@ module.exports = {
 
     },
 
-    create: (req, res) => {
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.has(req.body.password, salt, (err, hash) => {
-            req.body.password =hash;
-        dbUser
-          .create(req.body)
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err));
-
-       });
-     });
+    create: async function (req, res) {
+      console.log(req.body)
+      try {
+        let hash = await bcrypt.hash(req.body.password, 10)
+        let dbModel = await db.Users
+        .create({
+          username: req.body.username,
+          password: hash,
+        })
+        res.status(200).json(dbModel)
+      } catch (err) {
+        console.log(err)
+        res.status(422).json(err)
+      }
     },
 
     update: (req, rew) =>{
