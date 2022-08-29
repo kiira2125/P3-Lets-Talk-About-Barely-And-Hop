@@ -4,6 +4,7 @@ import Singup, { Login } from './components/Signup'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { atom } from 'jotai'
 import { AddRecipie } from './components/Blog'
+import ViewRecipe form './components/ViewRecipe'
 export const userAtom = atom(null)
 
 function App() {
