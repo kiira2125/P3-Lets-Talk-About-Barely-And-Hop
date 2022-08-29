@@ -68,3 +68,21 @@ class LoginForm extends Component {
       message: message
     })
  }
+ render(){
+
+    return(
+     <form-control>
+      <Wrapper>
+        <h2 className='loginTitle'> Start Connecting! </h2>
+        <h5 className='text-center failedLogin'>{this.state.message}</h5>
+        <form-group>
+          <LoginInput name='Username' type='username'value= {this.state.username} change={this.handleInputChange}></LoginInput>
+          <LoginInput name='Password' type='password'value= {this.state.password} change={this.handleInputChange}></LoginInput>
+        </form-group>
+      </Wrapper>
+     </form-control>
+     )
+   }
+  }
+  
+  export default LoginForm;
