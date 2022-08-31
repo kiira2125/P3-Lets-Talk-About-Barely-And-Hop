@@ -1,8 +1,9 @@
 import { useAtom } from 'jotai'
-import { userAtom } from '../../App'
-import {userNavigation} from 'react-router-dom'
+import { userAtom } from '../App'
+import { useNavigate } from 'react-router-dom'
 
 function Signup() {
+  const navigation = useNavigate()
   const [user, setUser] = useAtom(userAtom)
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -17,12 +18,20 @@ function Signup() {
         'Content-Type': 'application/json',
       },
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        setUser(data)
-        userNavigation('newrecipe')
-      })
+    .then((res) => {
+      console.log(res.status)
+      if (res.status !== 200) {
+        alert('Username is too short or username taken')
+        return res.status
+      } 
+      return res.json() 
+    })
+    .then((data) => {
+      if (data > 200) return
+      console.log(data)
+      setUser(data)
+      navigation('/newrecipe')
+    })
       .catch((err) => {
         console.log(err)
       })
@@ -41,20 +50,45 @@ function Signup() {
 } 
 
 export function Login() {
+  const navigation = useNavigate()
   const [user, setUser] = useAtom(userAtom)
   const handleSubmit = (e) => {
     e.preventDefault()
-    //need to fetch request
-    let returnValue = { username: 'test' }
-    setUser(returnValue)
+    fetch('/api/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: e.target.username.value,
+        password: e.target.password.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => {
+        console.log(res.status)
+        if (res.status !== 200) {
+          alert('Incorrect username or password')
+          return res.status
+        } 
+        return res.json() 
+      })
+      .then((data) => {
+        if (data === 400) return
+        console.log(data)
+        setUser(data)
+        navigation('/newrecipe')
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Username" name="username" />
+        <input type="password" placeholder="Password" name="password" />
         <button type="submit">Login</button>
       </form>
     </div>
