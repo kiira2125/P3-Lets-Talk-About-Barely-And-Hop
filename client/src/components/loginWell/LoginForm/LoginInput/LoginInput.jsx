@@ -13,3 +13,5 @@ const LoginInput = props =>(
       onChange={props.change} />
     </Col>
 )
+
+  export default LoginInput;
