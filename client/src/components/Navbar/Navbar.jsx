@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useAtom } from 'jotai'
-import { userAtom } from '../../App'
+import { userAtom } from '../../state'
 function Navbar() {
   const [user, setUser] = useAtom(userAtom)
 
