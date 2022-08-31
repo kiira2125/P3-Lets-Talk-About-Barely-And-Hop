@@ -16,11 +16,11 @@ export function AddRecipe() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch('/api/recipes', {
+    fetch('/api/users/recipes', {
       method: 'POST',
       body: JSON.stringify({
         name: e.target.name.value,
-        type: e.target.type.value,
+        beerType: e.target.type.value,
         description: e.target.description.value,
         ingredients: e.target.ingredients.value,
         instructions: e.target.instructions.value,
@@ -28,7 +28,9 @@ export function AddRecipe() {
       headers: {
         'Content-Type': 'application/json',
       },
+      
     })
+    
     .then((res) => {
       console.log(res.status)
       if (res.status !== 200) {
@@ -41,7 +43,7 @@ export function AddRecipe() {
       if (data > 200) return
       console.log(data)
       setUser(data)
-      navigation('/recipes')
+      navigation('/newrecipe')
     })
       .catch((err) => {
         console.log(err)
