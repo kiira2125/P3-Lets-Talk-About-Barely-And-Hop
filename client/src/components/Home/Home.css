@@ -1,0 +1,26 @@
+
+.HomeBackground {
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.15)
+        ), url('../../images/brew-day-home-production-of-craft-beer-royalty-free-image-1611183492.gif');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 93vh;
+    min-height: 93vh;
+}
+
+.HomeTitle {
+    margin: 0 auto;
+    padding-top: 1.75em;
+    text-align: center;
+    font-family: 'Franklin Gothic', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    font-size: 5em;
+}
+

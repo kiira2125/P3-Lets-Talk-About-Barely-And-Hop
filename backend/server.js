@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+  dotenv.config()
+  console.log(process.env.MONGODB_URI)
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');

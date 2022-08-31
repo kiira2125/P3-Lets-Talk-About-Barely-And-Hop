@@ -1,9 +1,10 @@
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Singup, { Login } from './components/Signup'
+import Navbar from './components/Navbar/Navbar'
+import Home from './components/Home/Home'
+import Singup, { Login } from './components/SignUp/Signup'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { atom } from 'jotai'
-import { AddRecipie } from './components/Blog'
+import { AddRecipie } from './components/Blog/Blog'
+//import ViewRecipe form './components/ViewRecipe'
 export const userAtom = atom(null)
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<Singup />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/newrecipie" element={<AddRecipie />} />
+      <Route path="/newrecipe" element={<AddRecipie />} />
     </Routes>
     </BrowserRouter>)
 }

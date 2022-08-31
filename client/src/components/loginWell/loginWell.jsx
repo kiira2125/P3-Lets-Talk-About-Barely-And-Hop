@@ -11,11 +11,11 @@ const LoginWell = () => {
          <Wrapper>
           <h2 className='loginTitle'> What's your next style brewing going to be? 0_0 </h2>
            <Row>
-            <Col xs={15} sm={5}>
+            <Col xs={12} sm={4}>
               <WellActionBtn class='landingBtn' link='/recipes' name='Top Recipes'/>
             </Col> 
-            <Col xs={15} sm={5}>
-              <WellActionBtn class='landingBtn' link='/brewers' name='Bes Brewers'/> 
+            <Col xs={12} sm={4}>
+              <WellActionBtn class='landingBtn' link='/brewers' name='Best Brewing Beers'/> 
             </Col> 
           </Row>   
        </Wrapper>
