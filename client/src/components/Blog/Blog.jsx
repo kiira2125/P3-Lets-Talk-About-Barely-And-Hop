@@ -1,4 +1,4 @@
-export function AddRecipie() {
+export function AddRecipe() {
   return (
     <div>
       <h1>Add Recipe</h1>
@@ -13,3 +13,5 @@ export function AddRecipie() {
     </div>
   );
 }
+
+export default AddRecipe;

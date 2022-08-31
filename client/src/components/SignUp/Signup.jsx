@@ -1,5 +1,5 @@
 import { useAtom } from 'jotai'
-import { userAtom } from '../App'
+import { userAtom } from '../../App'
 
 function Signup() {
   const [user, setUser] = useAtom(userAtom)

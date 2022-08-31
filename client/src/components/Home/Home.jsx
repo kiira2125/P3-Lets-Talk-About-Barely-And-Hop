@@ -1,8 +1,7 @@
-import reactLogo from '../assets/react.svg'
-import '../App.css'
+
 import { useState } from 'react'
 
-let dummyRecipies = [
+let dummyRecipes = [
   {
     id: 1,
     title: 'Beer',
@@ -20,22 +19,23 @@ let dummyRecipies = [
 ]
 
 function Home() {
-  // Get the real recipies from the datbase in mongodb
+  // Get the real recipes from the database in mongodb
   return (
     <div className="App">
       <h1>All Recipes</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-        {dummyRecipies.map((recipie) => (
-          <div key={recipie.id} style={{ width: '30%', padding: '8px' }}>
-            <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipie.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-            <h3>{recipie.title}</h3>
-            <p>{recipie.description}</p>
+        {dummyRecipes.map((recipe) => (
+          <div key={recipe.id} style={{ width: '30%', padding: '8px' }}>
+            <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipe.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <h3>{recipe.title}</h3>
+            <p>{recipe.description}</p>
             <button>View Recipe</button>
           </div>
         ))}
       </div>
     </div>
   )
+
 }
 
 export default Home
