@@ -1,6 +1,6 @@
 import reactLogo from '../assets/react.svg'
 import '../App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 let dummyRecipies = [
   {
@@ -20,15 +20,25 @@ let dummyRecipies = [
 ]
 
 function Home() {
-  // Get the real recipies from the datbase in mongodb
+  const [recipies, setRecipies] = useState([])
+
+  useEffect(() => {
+    fetch('/api/recipes')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      setRecipies(data)
+    })
+  }, [])
+
   return (
     <div className="App">
       <h1>All Recipes</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-        {dummyRecipies.map((recipie) => (
-          <div key={recipie.id} style={{ width: '30%', padding: '8px' }}>
-            <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipie.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-            <h3>{recipie.title}</h3>
+        {recipies?.map((recipie) => (
+          <div key={recipie._id} style={{ width: '30%', padding: '8px' }}>
+            {/* <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipie.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div> */}
+            <h3>{recipie.name}</h3>
             <p>{recipie.description}</p>
             <button>View Recipe</button>
           </div>
