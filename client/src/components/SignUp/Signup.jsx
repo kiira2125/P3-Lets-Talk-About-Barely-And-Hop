@@ -1,5 +1,6 @@
 import { useAtom } from 'jotai'
 import { userAtom } from '../../App'
+import {userNavigation} from 'react-router-dom'
 
 function Signup() {
   const [user, setUser] = useAtom(userAtom)
@@ -20,6 +21,7 @@ function Signup() {
       .then((data) => {
         console.log(data)
         setUser(data)
+        userNavigation('newrecipe')
       })
       .catch((err) => {
         console.log(err)
