@@ -28,7 +28,9 @@ const RecipeCard = props =>{
                 </Col>
             </Row>
             <Row>
-                <Col
+                <Col xs={12}>
+                    <Button className= 'recipeBtn' componentClass={Link} to= {"/recipes/" + props.id} size="large"> View Recipe O_o</Button>
+                </Col>
             </Row>
           </div>
         </Panel.Body>
@@ -37,3 +39,5 @@ const RecipeCard = props =>{
     </Panel>
 </Wrapper>
 }
+
+export default RecipeCard;
