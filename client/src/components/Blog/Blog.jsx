@@ -1,9 +1,9 @@
 import { useAtom } from 'jotai'
-import { userAtom } from '../App'
+import { userAtom } from '../../state'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react"
 
-export function AddRecipie() {
+export function AddRecipe() {
   const navigation = useNavigate()
   const [user, setUser] = useAtom(userAtom)
 
@@ -13,19 +13,51 @@ export function AddRecipie() {
     }
   }, [user])
 
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    // fetch
+    fetch('/api/recipes', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: e.target.name.value,
+        beerType: e.target.type.value,
+        description: e.target.description.value,
+        ingredients: e.target.ingredients.value,
+        instructions: e.target.instructions.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      
+    })
+    
+    .then((res) => {
+      console.log(res.status)
+      if (res.status !== 200) {
+        alert('Not valid input')
+        return res.status
+      } 
+      return res.json() 
+    })
+    .then((data) => {
+      if (data > 200) return
+      console.log(data)
+      setUser(data)
+      navigation('/newrecipe')
+    })
+      .catch((err) => {
+        console.log(err)
+      })
   }
   return (
     <div>
       <h1>Add Recipe</h1>
       <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={handleSubmit}>
-        <input type="text" placeholder="Recipe Name" />
-        <input type="text" placeholder="Recipe Type" />
-        <input type="text" placeholder="Recipe Description" />
-        <input type="text" placeholder="Recipe Ingredients" />
-        <input type="text" placeholder="Recipe Instructions" />
+        <input type="text" name="name" placeholder="Recipe Name" />
+        <input type="text" name="type" placeholder="Recipe Type" />
+        <input type="text" name="description" placeholder="Recipe Description" />
+        <input type="text" name="ingredients" placeholder="Recipe Ingredients" />
+        <input type="text" name="instructions" placeholder="Recipe Instructions" />
         <button type="submit">Add Recipe</button>
       </form>
     </div>
@@ -33,3 +65,5 @@ export function AddRecipie() {
 
   
 }
+
+export default AddRecipe;

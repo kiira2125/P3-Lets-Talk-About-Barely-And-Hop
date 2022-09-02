@@ -1,5 +1,5 @@
-import reactLogo from '../assets/react.svg'
-import '../App.css'
+import reactLogo from '../../../src/assets/react.svg'
+import './Home.css'
 import { useState, useEffect } from 'react'
 
 let dummyRecipes = [
