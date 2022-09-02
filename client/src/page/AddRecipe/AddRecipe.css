@@ -1,0 +1,9 @@
+.addRecipeBackground{
+    background-image: url("../../image/Hops-1-1-1200x800.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

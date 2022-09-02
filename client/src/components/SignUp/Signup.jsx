@@ -1,9 +1,10 @@
 import { useAtom } from 'jotai'
 import { userAtom } from '../../App'
-import {userNavigation} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Signup() {
   const [user, setUser] = useAtom(userAtom)
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(e.target.password.value)
@@ -21,7 +22,7 @@ function Signup() {
       .then((data) => {
         console.log(data)
         setUser(data)
-        userNavigation('newrecipe')
+        navigate('newrecipe')
       })
       .catch((err) => {
         console.log(err)
