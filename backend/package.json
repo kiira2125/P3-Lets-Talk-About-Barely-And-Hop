@@ -25,9 +25,6 @@
     "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
   },
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
-  "engines": {
-    "node": "9.5.0"
-  },
   "dependencies": {
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
