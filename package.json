@@ -9,7 +9,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"cd backend && nodemon server --ignore 'client/*'\" \"cd client && npm run dev\"",
     "client": "cd client && npm run dev",
-    "install": "cd client && yarn install",
+    "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
     "react-router-dom": "^4.3.1"
@@ -30,9 +30,6 @@
     "url": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop/issues"
   },
   "homepage": "https://github.com/kiira2125/P3-Lets-Talk-About-Barely-And-Hop#readme",
-  "engines": {
-    "node": "9.5.0"
-  },
   "dependencies": {
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
