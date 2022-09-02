@@ -37,3 +37,7 @@ const recipeSchema = new Schema({
     // form hops to yeast, to preboil, boi, directions, the amount of hops or yeast, what are the specs in the beer, what are the boil and preboils.
     //after readying a lot of the home brewing and understanding the level of information one needs to understand to make a successful homemade beer.
 })
+
+const Recipe = mongoose.model("Recipe", recipeSchema);
+
+module.exports = Recipe;

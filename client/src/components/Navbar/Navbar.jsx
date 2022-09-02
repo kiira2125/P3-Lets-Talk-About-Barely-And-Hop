@@ -26,7 +26,7 @@ function Navbar() {
               </li>
             </Link>
             </>): (
-              <Link to="/newrecipie" style={{ textDecoration: 'none' }}>
+              <Link to="/newrecipe" style={{ textDecoration: 'none' }}>
               <li className="nav-item" style={{ padding: '0 8px' }}>
                 New Recipe
               </li>
