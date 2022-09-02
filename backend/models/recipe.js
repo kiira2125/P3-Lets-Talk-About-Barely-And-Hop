@@ -28,7 +28,6 @@ const recipeSchema = new Schema({
     
     likes:{
         type: Number,
-        required: true,
         trim: true,
         max: 1012
     },

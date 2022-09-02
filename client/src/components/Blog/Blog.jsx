@@ -16,7 +16,7 @@ export function AddRecipe() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch('/api/users/recipes', {
+    fetch('/api/recipes', {
       method: 'POST',
       body: JSON.stringify({
         name: e.target.name.value,
