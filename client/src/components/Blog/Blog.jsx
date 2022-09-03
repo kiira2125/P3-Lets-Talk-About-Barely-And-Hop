@@ -1,9 +1,9 @@
 import { useAtom } from 'jotai'
-import { userAtom } from '../App'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react"
+import { userAtom } from '../../App'
 
-export function AddRecipie() {
+export function AddRecipe() {
   const navigation = useNavigate()
   const [user, setUser] = useAtom(userAtom)
 
@@ -33,3 +33,5 @@ export function AddRecipie() {
 
   
 }
+
+export default AddRecipe;

@@ -3,7 +3,7 @@ import Home from './components/Home/Home'
 import SingUp, { Login } from './components/SignUp/Signup'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { atom } from 'jotai'
-import { AddRecipe } from './components/Blog/Blog'
+import AddRecipe from './components/Blog/Blog'
 //import ViewRecipe from './components/ViewRecipe'
 //import RecipeForm from './components/RecipeForm'
 export const userAtom = atom(null)

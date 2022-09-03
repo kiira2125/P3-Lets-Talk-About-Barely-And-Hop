@@ -1,5 +1,5 @@
 import { useAtom } from 'jotai'
-import { userAtom } from '../App'
+import { userAtom } from '../../App'
 import { useNavigate } from 'react-router-dom'
 
 function Signup() {
