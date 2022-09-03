@@ -1,5 +1,5 @@
-//import reactLogo from '../assets/react.svg'
-import '../../App.css'
+import reactLogo from '../../../src/assets/react.svg'
+import './Home.css'
 import { useState, useEffect } from 'react'
 
 let dummyRecipes = [
@@ -33,7 +33,7 @@ function Home() {
 
   return (
     <div className="App">
-      <h1>All Recipes</h1>
+      <h1>Welcome to Home Brewing</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
         {recipes?.map((recipe) => (
           <div key={recipe._id} style={{ width: '30%', padding: '8px' }}>
