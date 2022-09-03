@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 function Signup() {
   const navigation = useNavigate()
   const [user, setUser] = useAtom(userAtom)
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(e.target.password.value)
@@ -18,20 +19,12 @@ function Signup() {
         'Content-Type': 'application/json',
       },
     })
-    .then((res) => {
-      console.log(res.status)
-      if (res.status !== 200) {
-        alert('Username is too short or username taken')
-        return res.status
-      } 
-      return res.json() 
-    })
-    .then((data) => {
-      if (data > 200) return
-      console.log(data)
-      setUser(data)
-      navigation('/newrecipe')
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setUser(data)
+        userNavigation('newrecipe')
+      })
       .catch((err) => {
         console.log(err)
       })

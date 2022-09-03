@@ -20,4 +20,4 @@ const LoginSuccessfully = () => (
   </Wrapper>
 );
 
-export default LoginSucessfully;
+export default LoginSuccessfully;

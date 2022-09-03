@@ -20,14 +20,14 @@ let dummyRecipes = [
 ]
 
 function Home() {
-  const [recipies, setRecipies] = useState([])
+  const [recipes, setRecipes] = useState([])
 
   useEffect(() => {
     fetch('/api/recipes')
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      setRecipies(data)
+      setRecipes(data)
     })
   }, [])
 
@@ -35,11 +35,11 @@ function Home() {
     <div className="App">
       <h1>Welcome to Home Brewing</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-        {recipies?.map((recipie) => (
-          <div key={recipie._id} style={{ width: '30%', padding: '8px' }}>
-            {/* <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipie.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div> */}
-            <h3>{recipie.name}</h3>
-            <p>{recipie.description}</p>
+        {recipes?.map((recipe) => (
+          <div key={recipe._id} style={{ width: '30%', padding: '8px' }}>
+            {/* <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipe.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div> */}
+            <h3>{recipe.name}</h3>
+            <p>{recipe.description}</p>
             <button>View Recipe</button>
           </div>
         ))}
