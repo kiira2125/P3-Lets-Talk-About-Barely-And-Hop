@@ -2,7 +2,7 @@ import { useAtom } from 'jotai'
 import { userAtom } from '../../state'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react"
-import { userAtom } from '../../App'
+// import { userAtom } from '../../App'
 
 export function AddRecipe() {
   const navigation = useNavigate()
