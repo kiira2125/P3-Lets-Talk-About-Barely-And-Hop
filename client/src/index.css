@@ -1,13 +1,20 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Franklin Gothic', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+
   
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-image: url(https://2fdltvvn8wp2rn64ywgk8o17-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/barleywine.jpg);
+  display: contents;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content:center;
+  display: block;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,12 +24,14 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
   text-decoration: inherit;
+  
 }
 a:hover {
-  color: #535bf2;
+  color: #e93f3f;
 }
 
 body {
@@ -36,12 +45,13 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding: 360px;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 15px 20px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -57,13 +67,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
+    color: #040e6e;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #e93f3f;
   }
   button {
     background-color: #f9f9f9;
