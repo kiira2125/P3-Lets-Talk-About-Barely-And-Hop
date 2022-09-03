@@ -9,6 +9,9 @@ const RecipeCard = props =>{
      <Panel.Heading>
       <Panel.Title toggle>
         <h1>{props.name}</h1><h2>{props.style}</h2>
+        <p>
+          
+          </p>
       </Panel.Title>
      </Panel.Heading>
      </div>
