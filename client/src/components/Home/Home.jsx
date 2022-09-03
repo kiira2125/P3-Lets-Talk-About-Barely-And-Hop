@@ -33,7 +33,7 @@ function Home() {
 
   return (
     <div className="App">
-      <h1>All Recipes</h1>
+      <h1>Welcome to Home Brewing</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
         {recipies?.map((recipie) => (
           <div key={recipie._id} style={{ width: '30%', padding: '8px' }}>
