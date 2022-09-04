@@ -30,7 +30,7 @@ function Signup() {
       })
   }
   return (
-    <div>
+    <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="username" placeholder="Username" />

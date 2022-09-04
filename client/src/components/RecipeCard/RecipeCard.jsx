@@ -9,9 +9,6 @@ const RecipeCard = props =>{
      <Panel.Heading>
       <Panel.Title toggle>
         <h1>{props.name}</h1><h2>{props.style}</h2>
-        <p>
-          
-          </p>
       </Panel.Title>
      </Panel.Heading>
      </div>
@@ -21,7 +18,7 @@ const RecipeCard = props =>{
           <div className="panelBody">
             <Row>
              <Col xs={12} md={12}>
-              <h2>BeerBrewing: {props.FirstName} {props.LastName} - {props.brewer}</h2>
+              <h2>Blond IPA: {props.FirstName} {props.LastName} - {props.brewer}</h2>
             </Col>
             </Row>
             <Row>
