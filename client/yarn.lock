@@ -300,9 +300,7 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18.0.17":
-  "integrity" "sha512-6hI08umYs6NaiHFEEGioXnxJ+oEhY3eRz8VCUaudZmGdtvPviCJB8mgaMxaDWAdPSYd4eFavrPk2QIolwbLYrg=="
-  "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.18.tgz"
-  "version" "18.0.18"
+  "version" "18.0.17"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -344,9 +342,7 @@
     "update-browserslist-db" "^1.0.5"
 
 "caniuse-lite@^1.0.30001370":
-  "integrity" "sha512-fKDH0F1KOJvR+mWSOvhj8lVRr/Q/mc5u5nabU2vi1/sgvlSqEsE8dOq0Hy/BqVbDkCYQPRRHB1WRjW6PGB/7PA=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001387.tgz"
-  "version" "1.0.30001387"
+  "version" "1.0.30001383"
 
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
@@ -389,14 +385,7 @@
     "ms" "2.1.2"
 
 "electron-to-chromium@^1.4.202":
-  "integrity" "sha512-r20dUOtZ4vUPTqAajDGonIM1uas5tf85Up+wPdtNBNvBSqGCfkpvMVvQ1T8YJzPV9/Y9g3FbUDcXb94Rafycow=="
-  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.240.tgz"
-  "version" "1.4.240"
-
-"esbuild-windows-64@0.14.54":
-  "integrity" "sha512-AoHTRBUuYwXtZhjXZbA1pGfTo8cJo3vZIcWGLiUcTNgHpJJMC1rVA44ZereBHMJtotyN71S8Qw0npiCIkW96cQ=="
-  "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.14.54.tgz"
-  "version" "0.14.54"
+  "version" "1.4.233"
 
 "esbuild@^0.14.47":
   "integrity" "sha512-Cy9llcy8DvET5uznocPyqL3BFRrFXSVqbgpMJ9Wz8oVjZlh/zUSNbPRbov0VX7VxN2JH1Oa0uNxZ7eLRb62pJA=="
@@ -477,9 +466,7 @@
     "has" "^1.0.3"
 
 "jotai@^1.8.1":
-  "integrity" "sha512-jRKTQKChLAJGB3zG5zklJoMtpWYixUi2jK3pZd5ZRpH4pQnjYYEOAVYCzZGr4Ce5Uj7j0ffYoLM4ULAAQXUoGw=="
-  "resolved" "https://registry.npmjs.org/jotai/-/jotai-1.8.2.tgz"
-  "version" "1.8.2"
+  "version" "1.8.1"
 
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
@@ -504,9 +491,7 @@
     "js-tokens" "^3.0.0 || ^4.0.0"
 
 "magic-string@^0.26.2":
-  "integrity" "sha512-u1Po0NDyFcwdg2nzHT88wSK0+Rih0N1M+Ph1Sp08k8yvFFU3KR72wryS7e1qMPJypt99WB7fIFVCA92mQrMjrg=="
-  "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.26.3.tgz"
-  "version" "0.26.3"
+  "version" "0.26.2"
   dependencies:
     "sourcemap-codec" "^1.4.8"
 
@@ -645,9 +630,7 @@
   "version" "2.0.0"
 
 "update-browserslist-db@^1.0.5":
-  "integrity" "sha512-We7BqM9XFlcW94Op93uW8+2LXvGezs7QA0WY+f1H7RR1q46B06W6hZF6LbmOlpCS1HU22q/6NOGTGW5sCm7NJQ=="
-  "resolved" "https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.0.6.tgz"
-  "version" "1.0.6"
+  "version" "1.0.5"
   dependencies:
     "escalade" "^3.1.1"
     "picocolors" "^1.0.0"
