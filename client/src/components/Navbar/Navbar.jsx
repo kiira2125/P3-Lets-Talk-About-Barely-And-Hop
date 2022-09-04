@@ -11,7 +11,7 @@ function Navbar() {
           <p className="nav-item" style={{ padding: '0 15px' }}>
             Recipes & Blog
           </p>
-        </Link>        
+          </Link>        
       <div>
           <ul style={{ display: 'flex', listStyle: 'none', flexGrow: 15, justifyContent: 'space-between' }}>
             {!user ? (<>

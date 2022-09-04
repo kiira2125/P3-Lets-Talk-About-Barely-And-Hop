@@ -30,7 +30,7 @@ function Signup() {
       })
   }
   return (
-    <div>
+    <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="username" placeholder="Username" />
@@ -77,8 +77,8 @@ export function Login() {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+     <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Username" name="username" />
         <input type="password" placeholder="Password" name="password" />

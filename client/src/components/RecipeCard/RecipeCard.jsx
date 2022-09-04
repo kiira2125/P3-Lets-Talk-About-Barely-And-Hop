@@ -18,7 +18,7 @@ const RecipeCard = props =>{
           <div className="panelBody">
             <Row>
              <Col xs={12} md={12}>
-              <h2>BeerBrewing: {props.FirstName} {props.LastName} - {props.brewer}</h2>
+              <h2>Blond IPA: {props.FirstName} {props.LastName} - {props.brewer}</h2>
             </Col>
             </Row>
             <Row>

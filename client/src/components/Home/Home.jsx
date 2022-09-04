@@ -40,6 +40,34 @@ function Home() {
             {/* <div style={{ width: '100%', height: '200px', backgroundImage: `url(${recipe.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div> */}
             <h3>{recipe.name}</h3>
             <p>{recipe.description}</p>
+              <p>4.0 lbs. (1.8 kg) American wheat malt
+              3.0 lbs. (1.4 kg) American Pilsen malt
+              2.0 lbs. (0.9 kg) American Vienna malt
+              8 oz. (227 g) American crystal malt (10 °L)
+              8 oz. (227 g) American CaraPils® malt
+              4.25 AAU Mt. Hood hops (60 mins)
+              (1.0 oz./28 g of 4.25% alpha acids)
+              4.25 AAU Mt. Hood hops (20 mins)
+              (1 oz./28 g of 4.25% alpha acids)
+              1 oz. (28 g) Mt. Hood hops (5 mins)
+              1 tsp. Irish moss (15 mins)
+              1 tsp crushed coriander seed (5 mins)
+              Fermentis SafBrew S -33 yeast
+              0.75 cups corn sugar (for priming)</p>
+              <h3>{recipe.name}</h3>
+               <p>{recipe.description}</p>
+              <p2>5.5 lbs. (2.5 kg) Briess wheat dry malt extract
+              8 oz. (227 g) American CaraPils® malt
+              8 oz (227 g) American 10 L crystal malt
+              4.25 AAU Mt. Hood hops (60 mins)
+              (1.0 oz./28 g of 4.25% alpha acids)
+              4.25 AAU Mt. Hood hops (20 mins)
+              (1 oz./28 g of 4.25% alpha acids)
+              1 oz. (28 g) Mt. Hood hops (5 mins)
+              1 tsp. Irish moss (15 mins)
+              1 tsp crushed coriander seed (5 mins)
+              Fermentis SafBrew S – 33 yeast
+              0.75 cups corn sugar (for priming)</p2>
             <button>View Recipe</button>
           </div>
         ))}
